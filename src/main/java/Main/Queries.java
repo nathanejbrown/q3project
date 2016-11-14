@@ -41,5 +41,34 @@ public class Queries {
         }
         return new ArrayList<Guitar>(allGuitars.values());
     }
+
+//    public static ArrayList<Guitar> getSomeGuitars(int maxValue) {
+//
+//        Map<String, Guitar> someGuitars = new HashMap<String, Guitar>();
+//        try {
+//            Connection conn = Db.Db();
+//            Statement stmt = conn.createStatement();
+//            ResultSet allTheGuitars = stmt.executeQuery("SELECT * FROM guitars WHERE price < " + maxValue + ";");
+//
+//            while (allTheGuitars.next()) {
+//
+//                int id = allTheGuitars.getInt("id");
+//                String stringedId = Integer.toString(id);
+//                String make = allTheGuitars.getString("make");
+//                String model = allTheGuitars.getString("model");
+//                int price = allTheGuitars.getInt("price");
+//
+//                Guitar guitar1 = new Guitar(stringedId, make, model, price);
+//                someGuitars.put(stringedId, guitar1);
+//            }
+//            stmt.close();
+//            conn.close();
+//        }
+//        catch (SQLException e) {
+//            System.out.println("Connection Failed! Check output console");
+//            e.printStackTrace();
+//        }
+//        return new ArrayList<Guitar>(someGuitars.values());
+//    }
 }
 
